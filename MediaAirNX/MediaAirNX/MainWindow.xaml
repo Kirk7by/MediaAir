@@ -1,0 +1,10 @@
+﻿<Window x:Class="MediaAirNX.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="179,255,0,0" VerticalAlignment="Top" Width="75"/>
+        <MediaElement HorizontalAlignment="Left" Height="119" Margin="367,0,0,0" VerticalAlignment="Top" Width="151" Source="Media/07 - Lifeline.mp3"/>
+
+    </Grid>
+</Window>
