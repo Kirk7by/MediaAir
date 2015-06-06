@@ -97,6 +97,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <Resource Include="Styles\fonts\05_ZZ Death Note 1.0.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -105,6 +108,7 @@
     <Content Include="Media\07 - Lifeline.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Media\volume.png" />
     <Resource Include="Styles\standartStyle.xslt" />
     <Resource Include="Media\anime_girl.jpg" />
   </ItemGroup>

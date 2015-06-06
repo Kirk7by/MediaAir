@@ -23,11 +23,32 @@ namespace MediaAirNX
         public MainWindow()
         {
             InitializeComponent();
+            elementMedia.Play();
         }
-
+        bool tmp, tmp1;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ButtonAutostartmusic_Click(object sender, RoutedEventArgs e)
+        {
+            if (!tmp)
+            {
+                elementMedia.Pause();
+                tmp = true;
+
+            }
+            else
+            {
+                elementMedia.Play();
+                tmp = false;
+            }
+        }
+
+        private void ButtonAutostartmusic_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            elementMedia.Stop();
         }
     }
 }
