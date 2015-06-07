@@ -50,5 +50,10 @@ namespace MediaAirNX
         {
             elementMedia.Stop();
         }
+
+        private void button_exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
