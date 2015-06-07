@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="457.8" Width="743.7"  ResizeMode="CanResizeWithGrip">
     
-    <Grid>
+    <Grid Loaded="Grid_Loaded">
         <Grid.RowDefinitions>
             <RowDefinition Height="27*"/>
             <RowDefinition Height="165*"/>

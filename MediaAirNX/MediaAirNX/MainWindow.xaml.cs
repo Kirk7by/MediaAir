@@ -55,5 +55,11 @@ namespace MediaAirNX
         {
             this.Close();
         }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.WindowStyle = WindowStyle.None;
+            this.WindowState = WindowState.Maximized;
+        }
     }
 }
