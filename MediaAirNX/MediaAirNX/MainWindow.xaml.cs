@@ -63,5 +63,10 @@ namespace MediaAirNX
             this.WindowState = WindowState.Maximized;
             //переход в полноэкранный режим
         }
+
+        private void button_setup_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

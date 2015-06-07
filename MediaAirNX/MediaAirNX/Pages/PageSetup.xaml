@@ -6,11 +6,22 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="465"
 	Title="PageSetup">
-
+    <Page.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetProperty="Width" From="80" To="150" Storyboard.TargetName="ch1"
+                                         AutoReverse="True" RepeatBehavior="0:0:10" Duration="0:0:2" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Page.Triggers>
     <Grid>
         <Border BorderThickness="1" Margin="0,0,-0.2,0" Background="#FF553967" Opacity="0.6"/>
 
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="122,60,0,0" VerticalAlignment="Top" Height="66" Width="143"  Foreground="Black" Background="{x:Null}" FontSize="48"/>
+        <CheckBox x:Name="ch1" Content="CheckBox" HorizontalAlignment="Left" Margin="122,60,0,0" VerticalAlignment="Top" Height="66" Width="143"  Foreground="Black" Background="{x:Null}" FontSize="48"/>
 
     </Grid>
 </Page>
