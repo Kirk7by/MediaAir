@@ -1,0 +1,22 @@
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\bin\Debug\MediaAirNX.exe.config
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\bin\Debug\Media\07 - Lifeline.mp3
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\bin\Debug\MediaAirNX.exe
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\bin\Debug\MediaAirNX.pdb
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MediaAirNX.csprojResolveAssemblyReference.cache
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MainWindow.baml
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MainWindow.g.cs
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\App.g.cs
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MediaAirNX_Content.g.cs
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MediaAirNX_MarkupCompile.cache
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MediaAirNX.g.resources
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MediaAirNX.Properties.Resources.resources
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MediaAirNX.csproj.GenerateResource.Cache
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MediaAirNX.exe
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MediaAirNX.pdb
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\Styles\Dictionary1.baml
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\Styles\main_styles.baml
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\App.baml
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\bin\Debug\MediaAirNX.exe.manifest
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\bin\Debug\MediaAirNX.application
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MediaAirNX.exe.manifest
+C:\Users\1\Documents\GitHub\MediaAir\MediaAirNX\MediaAirNX\obj\Debug\MediaAirNX.application
