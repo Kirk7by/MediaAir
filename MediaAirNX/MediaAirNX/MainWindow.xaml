@@ -37,7 +37,6 @@
                 <ImageBrush ImageSource="Media/volume.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="9.6,10.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Height="50" Style="{DynamicResource DefaultButtonStyle}" Background="#FF0A467C"/>
 
     </Grid>
 </Window>
