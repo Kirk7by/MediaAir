@@ -58,8 +58,10 @@ namespace MediaAirNX
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
+            //-----------------------------
             this.WindowStyle = WindowStyle.None;
             this.WindowState = WindowState.Maximized;
+            //переход в полноэкранный режим
         }
     }
 }
