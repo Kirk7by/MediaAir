@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediaAirNX.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,20 +25,18 @@ namespace MediaAirNX
         {
             InitializeComponent();
             elementMedia.Play();
-        }
-        bool tmp, tmp1;
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            MediaAirNX.config.Default.SettingsSaving+= InitializeFullscreanWindow;  /*подписка на событие сохранения настроек*/
+            InitializeFullscreanWindow(this, EventArgs.Empty);  //вызов иницилизации параметров раскрытия на весь экран
         }
 
+       
+        bool tmp;   /*отвечает за воспроизедение*/
         private void ButtonAutostartmusic_Click(object sender, RoutedEventArgs e)
         {
             if (!tmp)
             {
                 elementMedia.Pause();
                 tmp = true;
-
             }
             else
             {
@@ -45,28 +44,43 @@ namespace MediaAirNX
                 tmp = false;
             }
         }
-
         private void ButtonAutostartmusic_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             elementMedia.Stop();
         }
 
-        private void button_exit_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
 
+        
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
             //-----------------------------
-            this.WindowStyle = WindowStyle.None;
-            this.WindowState = WindowState.Maximized;
-            //переход в полноэкранный режим
+            
+            //переход в полноэкранный режим //ну ну)))
         }
 
+
+        public void InitializeFullscreanWindow(object sender, EventArgs e)
+        {
+            if (MediaAirNX.config.Default.FullScreen == true)
+            {
+                this.WindowStyle = WindowStyle.None;
+                this.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                this.WindowStyle = WindowStyle.ThreeDBorderWindow;
+                this.WindowState = WindowState.Normal;
+            }
+        } //иницилизация перехода в полноэкранный режим и обратно
         private void button_setup_Click(object sender, RoutedEventArgs e)
         {
-
-        }
+            Frame.Content = null;
+            Frame.NavigationService.RemoveBackEntry();
+            Frame.Source = new Uri("/MediaAirNX;component/Pages/PageSetup.xaml", UriKind.RelativeOrAbsolute);
+        }   //нажатие на кнопку настроек
+        private void button_exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }   //нажатие на кнопку выход
     }
 }
