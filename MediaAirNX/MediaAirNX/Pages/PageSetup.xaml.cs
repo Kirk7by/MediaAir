@@ -34,7 +34,7 @@ namespace MediaAirNX.Pages  //страница настроек
             }
             else
             {
-                ButtonFullscrean.Background = new SolidColorBrush(Color.FromArgb(90, 85, 57, 103));
+                ButtonFullscrean.Background = new SolidColorBrush(Color.FromArgb(30, 71, 32, 73));
             }
         }   /*иницилизация кнопки на весь экран*/
 

@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -82,5 +83,36 @@ namespace MediaAirNX
         {
             this.Close();
         }   //нажатие на кнопку выход
+
+        private void buttonHideMenu_Click(object sender, RoutedEventArgs e)
+        {
+            if (col1.Width != new GridLength(0, GridUnitType.Star))
+            {
+                col1.Width = new GridLength(0, GridUnitType.Star);
+                buttonHideMenu.Opacity = 100;
+                buttonHideMenu.Foreground.Opacity = 100;
+                buttonHideMenu.Background.Opacity = 100;
+                buttonHideMenu.Width = 38;
+                buttonHideMenu.Background = new SolidColorBrush(Color.FromArgb(100, 85, 57, 103));
+                
+                
+            }
+            else
+            {
+                buttonHideMenu.Background = new SolidColorBrush(Color.FromArgb(5, 13, 172, 57));
+                col1.Width = new GridLength(180, GridUnitType.Auto);
+                buttonHideMenu.Opacity = 0.5;
+                buttonHideMenu.Foreground.Opacity = 0.5;
+                buttonHideMenu.Background.Opacity = 0.1;
+                buttonHideMenu.Width = 33;
+            }
+        }
+
+        private void button_Tracklist_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Content = null;
+            Frame.NavigationService.RemoveBackEntry();
+            Frame.Source = new Uri("/MediaAirNX;component/Pages/PageTrackList.xaml", UriKind.RelativeOrAbsolute);
+        }   
     }
 }
