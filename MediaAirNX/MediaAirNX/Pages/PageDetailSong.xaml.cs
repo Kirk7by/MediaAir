@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace MediaAirNX.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageTrackList.xaml
+    /// Логика взаимодействия для PageDetailSong.xaml
     /// </summary>
-    public partial class PageTrackList : Page
+    public partial class PageDetailSong : Page
     {
-        public PageTrackList()
+        public PageDetailSong()
         {
             InitializeComponent();
-        }
-
-        private void тесткнопка_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService nav = NavigationService.GetNavigationService(this);
-            nav.Navigate(new Uri("/MediaAirNX;component/Pages/PageDetailSong.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

@@ -8,22 +8,27 @@
 	Title="PageTrackList">
 
     <Grid>
-        <ListBox Name="lstCars" Margin="5,5,5,23" Background="White" BorderBrush="#FF828790" VerticalContentAlignment="Center" RenderTransformOrigin="0.521,0.179">
+        <ListBox Name="lstCars" Margin="5,5,5,3" Background="#CCD3CDFF" BorderBrush="#FF828790" VerticalContentAlignment="Top" RenderTransformOrigin="0.521,0.179" UseLayoutRounding="False" AlternationCount="1">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Border Margin="5" BorderThickness="1" BorderBrush="SteelBlue" CornerRadius="4" Width="271" Height="75" RenderTransformOrigin="0.495,0.565">
-                        <Grid Margin="3">
+                    <Border Margin="2" BorderThickness="2" BorderBrush="#CED995E3" CornerRadius="4" Width="381" Height="50" RenderTransformOrigin="0.495,0.565">
+                        <Grid Margin="5.4,3.4,3.2,3">
                             <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                    
-                                <RowDefinition/>
+                                <RowDefinition Height="21*"/>
+
+                                <RowDefinition Height="19*"/>
                             </Grid.RowDefinitions>
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="egfefefefefefef" VerticalAlignment="Top" Height="115" Width="169" FontSize="48"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="типа название композиции" VerticalAlignment="Stretch" Height="Auto" Width="170" FontSize="16" Grid.RowSpan="2" Margin="0"/>
+                            <Button x:Name="тесткнопка" Click="тесткнопка_Click" Background="#3317E019" Content="типа посмотреть подробно" Foreground="White" Style="{DynamicResource DefaultButtonStyle}"/>
                         </Grid>
                     </Border>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-            <Button/>
+
+
+            <Button Content="Button" Height="100" Width="75"/>
+            <Button Content="Button" Height="100" Width="75"/>
+            <Button Height="100" Width="75"/>
 
         </ListBox>
     </Grid>
