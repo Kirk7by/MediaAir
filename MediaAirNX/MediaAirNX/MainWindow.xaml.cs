@@ -1,4 +1,5 @@
-﻿using MediaAirNX.Pages;
+﻿using MediaAirNX.Logic;
+using MediaAirNX.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,15 +23,30 @@ namespace MediaAirNX
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        Image image = new Image();
+        ImageBrush myBrush = new ImageBrush();
+        
+
+
         public MainWindow()
         {
             InitializeComponent();
+
             elementMedia.Play();
-            MediaAirNX.config.Default.SettingsSaving+= InitializeFullscreanWindow;  /*подписка на событие сохранения настроек*/
+            MediaAirNX.config.Default.SettingsSaving += InitializeFullscreanWindow;  /*подписка на событие сохранения настроек*/
             InitializeFullscreanWindow(this, EventArgs.Empty);  //вызов иницилизации параметров раскрытия на весь экран
+            InitializeImage();
         }
 
-       
+        private void InitializeImage()
+        {
+            image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/anime_girl.jpg"));
+            myBrush.ImageSource = image.Source;
+            myBrush.Stretch = Stretch.UniformToFill;
+            MaineWindow.Background = myBrush;
+        }
+
         bool tmp;   /*отвечает за воспроизедение*/
         private void ButtonAutostartmusic_Click(object sender, RoutedEventArgs e)
         {
@@ -75,6 +91,13 @@ namespace MediaAirNX
         } //иницилизация перехода в полноэкранный режим и обратно
         private void button_setup_Click(object sender, RoutedEventArgs e)
         {
+            //swap Image
+
+            image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/optionsGirlsSmoke.jpg"));
+            myBrush.ImageSource = image.Source;
+            MaineWindow.Background = myBrush;
+            
+            
             Frame.Content = null;
             Frame.NavigationService.RemoveBackEntry();
             Frame.Source = new Uri("/MediaAirNX;component/Pages/PageSetup.xaml", UriKind.RelativeOrAbsolute);
@@ -110,9 +133,36 @@ namespace MediaAirNX
 
         private void button_Tracklist_Click(object sender, RoutedEventArgs e)
         {
+            image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/img1.jpg"));
+            myBrush.ImageSource = image.Source;
+            MaineWindow.Background = myBrush;
             Frame.Content = null;
             Frame.NavigationService.RemoveBackEntry();
             Frame.Source = new Uri("/MediaAirNX;component/Pages/PageTrackList.xaml", UriKind.RelativeOrAbsolute);
-        }   
+            // new serializableCollections().Save();
+           //  serializableCollections.Save();
+        }
+
+        private void button_Add_new_Click(object sender, RoutedEventArgs e)
+        {
+            image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/img2.jpg"));
+            myBrush.ImageSource = image.Source;
+            MaineWindow.Background = myBrush;
+
+            Frame.Content = null;
+            Frame.NavigationService.RemoveBackEntry();
+            Frame.Source = new Uri("/MediaAirNX;component/Pages/PageAddSongs.xaml", UriKind.RelativeOrAbsolute);
+        }
+
+        private void button_profile_Click(object sender, RoutedEventArgs e)
+        {
+            image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/anime_girl.jpg"));
+            myBrush.ImageSource = image.Source;
+            MaineWindow.Background = myBrush;
+
+            Frame.Content = null;
+            Frame.NavigationService.RemoveBackEntry();
+            Frame.Source = new Uri("/MediaAirNX;component/Pages/PageProfile.xaml", UriKind.RelativeOrAbsolute);
+        }
     }
 }

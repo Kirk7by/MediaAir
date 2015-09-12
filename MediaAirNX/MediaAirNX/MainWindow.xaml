@@ -43,25 +43,26 @@
             <ColumnDefinition Width="63.2"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="Media/anime_girl.jpg" Stretch="UniformToFill" TileMode="FlipX"/>
+            <ImageBrush ImageSource="Media/anime_girl.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <MediaElement x:Name="elementMedia" HorizontalAlignment="Left" Height="75" Margin="232.6,37.8,0,-62.4" VerticalAlignment="Top" Width="98" Source="Media/07 - Lifeline.mp3" Grid.Column="1" Grid.Row="2" LoadedBehavior="Manual" d:IsLocked="True" d:IsHidden="True"/>
         <Viewbox Margin="0,10,1.4,4.2" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" StretchDirection="UpOnly">
             <Grid HorizontalAlignment="Left" Height="268" VerticalAlignment="Top" Width="162">
 
 
-                <Button x:Name="button_random" Content="Случайная композиция" Opacity="0.9" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" Background="#FF553967" HorizontalAlignment="Left" Width="162" Style="{DynamicResource DefaultButtonStyle}" />
-                <Button x:Name="button_Add_new" Content="Добавить новую" Opacity="0.9" Margin="0,37,0,0" Background="#FF553967" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="162" Style="{DynamicResource DefaultButtonStyle}"/>
-                <Button x:Name="button_training" Content="Тренировка" Opacity="0.9" Margin="0,74,0,0" Background="#FF553967" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="162" Style="{DynamicResource DefaultButtonStyle}"/>
-                <Button x:Name="button_exit" Content="Выход" Opacity="0.9" Margin="1,236,0,0" Background="#FF553967" Foreground="White" BorderBrush="{x:Null}" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="161" Style="{DynamicResource DefaultButtonStyle}" Click="button_exit_Click"/>
-                <Button x:Name="button_Tracklist" Content="Треклист" Opacity="0.9" Margin="0,111,0,0" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" Background="#FF553967" HorizontalAlignment="Left" Width="162"  Style="{DynamicResource DefaultButtonStyle}" Click="button_Tracklist_Click"/>
-                <Button x:Name="button_profile" Content="Профиль" Opacity="0.9" Margin="1,148,0,0" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" Background="#FF553967" HorizontalAlignment="Left" Width="161"  Style="{DynamicResource DefaultButtonStyle}"/>
+                <Button x:Name="button_random" Content="Случайная композиция" Opacity="0.8" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" Background="#FF553967" HorizontalAlignment="Left" Width="162" Style="{DynamicResource DefaultButtonStyle}" />
+                <Button x:Name="button_Add_new" Content="Добавить новую" Opacity="0.8" Margin="0,37,0,0" Background="#FF553967" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="162" Style="{DynamicResource DefaultButtonStyle}" Click="button_Add_new_Click"/>
+                <Button x:Name="button_training" Content="Тренировка" Opacity="0.8" Margin="0,74,0,0" Background="#FF553967" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="162" Style="{DynamicResource DefaultButtonStyle}"/>
+                <Button x:Name="button_exit" Content="Выход" Opacity="0.8" Margin="1,236,0,0" Background="#FF553967" Foreground="White" BorderBrush="{x:Null}" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="161" Style="{DynamicResource DefaultButtonStyle}" Click="button_exit_Click"/>
+                <Button x:Name="button_Tracklist" Content="Треклист" Opacity="0.8" Margin="0,111,0,0" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" Background="#FF553967" HorizontalAlignment="Left" Width="162"  Style="{DynamicResource DefaultButtonStyle}" Click="button_Tracklist_Click"/>
+                <Button x:Name="button_profile" Content="Профиль" Opacity="0.8" Margin="1,148,0,0" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" Background="#FF553967" HorizontalAlignment="Left" Width="161"  Style="{DynamicResource DefaultButtonStyle}" Click="button_profile_Click"/>
 
                 <!--Кнопка выхода/////////////////////////////////////////////////-->
 
 
                 <!--Кнопка выхода////////////////////////////////////////////////-->
-                <Button x:Name="button_setup" Content="Настройки" Opacity="0.9" Margin="1,185,0,0" Background="#FF553967" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="161" Style="{DynamicResource DefaultButtonStyle}"  Click="button_setup_Click">
+                <Button x:Name="button_setup"   Content="Настройки" Opacity="0.8" Margin="1,185,0,0" Background="#FF553967" Foreground="White" BorderBrush="{x:Null}" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="161" Style="{DynamicResource DefaultButtonStyle}"  Click="button_setup_Click" >
+
                     <Button.Triggers>
                         <EventTrigger RoutedEvent="ButtonBase.Click">
                             <BeginStoryboard>
@@ -75,12 +76,12 @@
                         </EventTrigger>
                     </Button.Triggers>
                 </Button>
-
+              
 
             </Grid>
         </Viewbox>
         <Frame x:Name="Frame" Margin="1.6,13,9.6,9.6" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden" d:IsHidden="True" d:IsLocked="True"/>
-        <Button x:Name="ButtonAutostartmusic" Content="" Grid.Column="2" Margin="2.6,0,-0.4,1.2" Style="{DynamicResource imagebutton}" Click="ButtonAutostartmusic_Click" MouseDoubleClick="ButtonAutostartmusic_MouseDoubleClick" d:IsHidden="True" d:IsLocked="True">
+        <Button x:Name="ButtonAutostartmusic" Content="" Grid.Column="2" Margin="2.6,0,-0.4,1.2" Style="{DynamicResource imagebutton}" Click="ButtonAutostartmusic_Click" MouseDoubleClick="ButtonAutostartmusic_MouseDoubleClick">
             <Button.OpacityMask>
                 <ImageBrush ImageSource="Media/volume.png" Stretch="Uniform"/>
             </Button.OpacityMask>

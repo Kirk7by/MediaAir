@@ -6,28 +6,31 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="400"
 	Title="PageSetup">
+    <!--
     <Page.Triggers>
         <EventTrigger RoutedEvent="Loaded">
             <EventTrigger.Actions>
                 <BeginStoryboard>
                     <Storyboard>
-                        <DoubleAnimation Storyboard.TargetProperty="Width" From="0" To="217" Storyboard.TargetName="ch1"
-                                         AutoReverse="True" RepeatBehavior="0:0:10" Duration="0:0:0.5" />
+                        <DoubleAnimation Storyboard.TargetProperty="Width" From="0" To="380" Storyboard.TargetName="ch1"
+                                         AutoReverse="False"   Duration="0:0:0.4" />
+                        RepeatBehavior="0:0:1"
                     </Storyboard>
                 </BeginStoryboard>
             </EventTrigger.Actions>
         </EventTrigger>
-    </Page.Triggers>
+    </Page.Triggers> 
+    -->
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/MediaAirNX;component/Media/sinyaya-gryaznaya-texturvga.png" Opacity="0.55" Stretch="UniformToFill" TileMode="FlipX"/>
+            <SolidColorBrush Color="#FF242429" Opacity="0.8"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="23*"/>
-            <RowDefinition Height="50*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="73*"/>
             <RowDefinition Height="77*"/>
         </Grid.RowDefinitions>
-        <Viewbox Margin="32,12.6,35,12" Grid.Row="2" Stretch="Fill">
+        <Viewbox Margin="32,13,35,12" Grid.Row="2" Stretch="Fill">
             <Grid HorizontalAlignment="Left" Height="122" VerticalAlignment="Top" Width="272">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="3*"/>
@@ -36,17 +39,23 @@
                     <RowDefinition Height="30*"/>
                     <RowDefinition Height="30*"/>
                 </Grid.RowDefinitions>
-                <Button x:Name="ButtonFullscrean" Content="Полноэкранный режим" Opacity="0.9" Foreground="White" BorderBrush="#CCFFFFFF" Style="{DynamicResource buttonSetupStyle}" Background="#FF0DAC39" Grid.Row="3" Click="ButtonFullscrean_Click" Margin="1,1.4"/>
-                <Button x:Name="ButtonSaveSettings" Content="Сохранить изменения" Opacity="0.9" Background="#7F4284AB" Foreground="White" BorderBrush="#CCFFFFFF" Style="{DynamicResource buttonSetupStyle}" Grid.Row="4" Click="ButtonSaveSettings_Click" Margin="1,0.6,1,2"/>
-                <Button Content="Еще какая-то настройка" Opacity="0.9" Foreground="White" BorderBrush="#CCFFFFFF" Style="{DynamicResource buttonSetupStyle}" Background="#7F553967" Grid.Row="2" Margin="1,1,1,0.6"/>
-                <Button Content="Настройка 1" Opacity="0.9" Foreground="White" BorderBrush="#CCFFFFFF" Style="{DynamicResource buttonSetupStyle}" Background="#7F553967" Margin="1,3,1,1" Grid.RowSpan="2"/>
+                <Button x:Name="ButtonFullscrean" Content="Полноэкранный режим" Opacity="0.9" Foreground="White" BorderBrush="#CCFFFFFF" Style="{DynamicResource buttonSetupStyle}" Background="#7F154612" Grid.Row="3" Click="ButtonFullscrean_Click" Margin="1,1.4"/>
+                <Button x:Name="ButtonSaveSettings" Content="Сохранить изменения" Opacity="0.9" Background="#7F1A3240" Foreground="White" BorderBrush="#CCFFFFFF" Style="{DynamicResource buttonSetupStyle}" Grid.Row="4" Click="ButtonSaveSettings_Click" Margin="1,0.6,1,2"/>
+                <Button Content="Музыка" Opacity="0.9" Foreground="White" BorderBrush="#CCFFFFFF" Style="{DynamicResource buttonSetupStyle}" Background="#7F151515" Grid.Row="2" Margin="1,1,1,0.6"/>
+                <Button Content="Стандартные шрифты" Opacity="0.9" Foreground="White" BorderBrush="#CCFFFFFF" Style="{DynamicResource buttonSetupStyle}" Background="#7F151515" Margin="1,3,1,1" Grid.RowSpan="2"/>
+                <Button x:Name="ButtonPatch" Content="Путь" Opacity="0.9" Foreground="White" BorderBrush="#CCFFFFFF" Style="{DynamicResource buttonSetupStyle}" Background="#7F151515" Margin="1,-33,1,17" Click="ButtonPatch_Click" FontSize="12" />
+                <Label x:Name="label" Content="Путь к файлу со списком" HorizontalAlignment="Left" Margin="80,-45,0,36" VerticalAlignment="Bottom" Foreground="#FF7EC74C" FontSize="9.333" Height="12" Padding="0" FontFamily="Arial" Background="{x:Null}" FontStyle="Italic" HorizontalContentAlignment="Center" Width="115"/>
+                <Button x:Name="ButtonPatch__mp3" Content="Путь" Opacity="0.9" Foreground="White" BorderBrush="#CCFFFFFF" Style="{DynamicResource buttonSetupStyle}" Background="#7F151515" Margin="1,-64,1,48" FontSize="12" Click="ButtonPatch__mp3_Click" />
+                <Label x:Name="label_Copy" Content="Путь к mp3 файлу при запуске" HorizontalAlignment="Left" Margin="52,-76,0,67" VerticalAlignment="Bottom" Foreground="#FF7EC74C" FontSize="9.333" Height="12" Padding="0" FontFamily="Arial" Background="{x:Null}" FontStyle="Italic" HorizontalContentAlignment="Center" Width="183"/>
+                <Label x:Name="label_Copy1" Content="Меню настроек" HorizontalAlignment="Left" Margin="1,-123,0,41" FontSize="21.333" Padding="0" FontFamily="Arial" Background="{x:Null}" FontStyle="Italic" Width="270">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="White" Opacity="0.4"/>
+                    </Label.Foreground>
+                </Label>
             </Grid>
         </Viewbox>
-        <CheckBox x:Name="ch1" HorizontalAlignment="Left" Margin="72,-12,0,0" Width="217"  Foreground="White" Background="{x:Null}" FontSize="48" Height="67" VerticalAlignment="Top" Content="анимция" Grid.RowSpan="2">
-            <CheckBox.Effect>
-                <BlurEffect Radius="3"/>
-            </CheckBox.Effect>
-        </CheckBox>
+
+
 
     </Grid>
 </Page>

@@ -24,8 +24,13 @@ namespace MediaAirNX.Pages  //страница настроек
         {
             InitializeComponent();
             IntitilizateButtonFullscrean();
+            ItitilizateButtonPatch();
         }
 
+        private void ItitilizateButtonPatch()
+        {
+            ButtonPatch.Content = MediaAirNX.config.Default.PatchMediaXMLFile;
+        }
         private void IntitilizateButtonFullscrean()
         {
             if (MediaAirNX.config.Default.FullScreen == true)
@@ -34,7 +39,7 @@ namespace MediaAirNX.Pages  //страница настроек
             }
             else
             {
-                ButtonFullscrean.Background = new SolidColorBrush(Color.FromArgb(30, 71, 32, 73));
+                ButtonFullscrean.Background = new SolidColorBrush(Color.FromArgb(21, 71, 18, 50));
             }
         }   /*иницилизация кнопки на весь экран*/
 
@@ -55,5 +60,20 @@ namespace MediaAirNX.Pages  //страница настроек
         {
             MediaAirNX.config.Default.Save();
         }   /*событие нажатия кнопки сохранить настроки*/
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonPatch_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonPatch__mp3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

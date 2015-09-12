@@ -100,6 +100,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>config.settings</DependentUpon>
     </Compile>
+    <Compile Include="Logic\GlobalLongsListName.cs" />
+    <Compile Include="Logic\MetodtSerializable.cs" />
+    <Compile Include="Logic\serializableCollections.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -107,6 +110,10 @@
     <Page Include="Pages\PageDetailSong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageAddSongs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\PageProfile.xaml">
       <SubType>Designer</SubType>
@@ -132,6 +139,9 @@
   <ItemGroup>
     <Compile Include="Pages\PageDetailSong.xaml.cs">
       <DependentUpon>PageDetailSong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAddSongs.xaml.cs">
+      <DependentUpon>PageAddSongs.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageProfile.xaml.cs">
       <DependentUpon>PageProfile.xaml</DependentUpon>
@@ -179,6 +189,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Media\img2.jpg" />
+    <Resource Include="Media\img1.jpg" />
+    <Resource Include="Media\optionsGirlsSmoke.jpg" />
     <Resource Include="Media\imageAlbum.jpg" />
     <Resource Include="Media\sinyaya-gryaznaya-texturvga.png" />
     <Resource Include="Media\sinyaya-gryaznaya-textura.png" />
