@@ -1,6 +1,7 @@
 ﻿using MediaAirNX.Logic;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -23,10 +24,17 @@ namespace MediaAirNX.Pages
     /// </summary>
     public partial class PageTrackList : Page
     {
+        
+        delegate void bubl();
+        event bubl hb;
+
         public PageTrackList()
         {
             InitializeComponent();
             initializeDataGrid();
+            mediaElement3.Source = new Uri(@"E:\Music\Death Note OST\Death Note Original Soundtrack I/01. Hideki Taniuchi - Death Note.mp3");
+          
+
         }
 
         private void тесткнопка_Click(object sender, RoutedEventArgs e)
@@ -37,19 +45,19 @@ namespace MediaAirNX.Pages
 
         void ShowHideDetails(object sender, RoutedEventArgs e)
         {
-            for (var vis = sender as Visual; vis != null; vis = VisualTreeHelper.GetParent(vis) as Visual)
-                if (vis is DataGridRow)
-                {
-                    var row = (DataGridRow)vis;
-                    row.DetailsVisibility =
-                      row.DetailsVisibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
-                    break;
-                }
+            object MusicFilePath = ((Button)sender).CommandParameter;
+            StaticEventsClass.MediaSource = MusicFilePath.ToString();
+          
+            
+     //       mediaElement3.Source = new Uri(MusicFilePath.ToString());
+     //      mediaElement3.Play();
+     //  MessageBox.Show(MusicFilePath.ToString());
         }
         private void initializeDataGrid()
         {
             List<serializableCollections> cats = new List<serializableCollections>
-           { new serializableCollections() { Artist = "limb Bizkit", NameSong = "Sylvester", Patch = "8", Progress = "66", ImageFilePath = Convert.ToString(new Uri("pack://application:,,,/Media/optionsGirlsSmoke.jpg")) }};
+           { new serializableCollections() { Artist = "limb Bizkit", NameSong = "Sylvester", Patch = "8", Progress = "66", ImageFilePath = Convert.ToString(new Uri("pack://application:,,,/Media/optionsGirlsSmoke.jpg")), MusicFilePath = Convert.ToString(new Uri(@"E:\Music\Death Note OST\Death Note Original Soundtrack I/01. Hideki Taniuchi - Death Note.mp3")) },
+            new serializableCollections() { Artist = "fd", NameSong = "Sylvester", Patch = "8", Progress = "66", ImageFilePath = Convert.ToString(new Uri(@"E:\Music\Billy Talent - 2003-2012 - Дискография\Singles\2009 - Rusted From The Rain (Single)/Front.jpg")), MusicFilePath = Convert.ToString(new Uri(@"L:\10.07.2015/Killswitch Engage - My Curse - full acoustic cover.mp4")) }};
             
             /* cats.Add(new serializableCollections("Sylvester", "8", "25"));
              cats.Add(new serializableCollections("Syl545ester", "545", "25"));

@@ -38,7 +38,7 @@ namespace MediaAirNX.Logic
         public string Patch { get; set; }
         public string Progress { get; set; }
         public string ImageFilePath { get;  set; }
-        
+        public string MusicFilePath { get;  set; }
     }
 
 }

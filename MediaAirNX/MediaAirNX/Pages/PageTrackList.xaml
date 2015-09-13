@@ -12,17 +12,19 @@
             <RowDefinition Height="24"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="dataGrid" Margin="10,0,10,10" ColumnWidth="*" Grid.Row="1">
+        <MediaElement x:Name="mediaElement3" Margin="10,0,10,10" Grid.Row="1" LoadedBehavior="Manual"/>
+
+        <DataGrid x:Name="dataGrid" Margin="10,0,10,10" ColumnWidth="*" Grid.Row="1" CanUserAddRows="False" HorizontalGridLinesBrush="#99151F4D" VerticalGridLinesBrush="#992B4170" BorderBrush="#CC688CAF" RowBackground = "#FFCDE3EA" Opacity="0.8" VerticalContentAlignment="Stretch" Style="{DynamicResource DataGridStyle2}" FontSize="18.667" FontFamily="Sitka Text" Foreground="Black" FontWeight="Bold" GridLinesVisibility="Horizontal" HeadersVisibility="Column" Background="{x:Null}" MinColumnWidth="40" MinRowHeight="3">
             <DataGrid.Columns>
-                
-                <DataGridTemplateColumn Header="Play">
+
+                <DataGridTemplateColumn Header="Play" IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Click="ShowHideDetails">Details</Button>
+                            <Button Click="ShowHideDetails" CommandParameter="{Binding MusicFilePath}" Content="Play" Style="{DynamicResource buttonSetupStyle}" Background="#CCEE7D7D" Opacity="0.8" FontSize="18.667"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Image">
+                <DataGridTemplateColumn Header="Image" Width="125">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Image Source="{Binding ImageFilePath}" />
@@ -30,11 +32,6 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
-            
-            
-            <DataGrid.Background>
-                <SolidColorBrush Color="#FFF0F0F0" Opacity="0.8"/>
-            </DataGrid.Background>
         </DataGrid>
         <Grid x:Name="searhGrid" Margin="10,0">
             <Grid.Background>
