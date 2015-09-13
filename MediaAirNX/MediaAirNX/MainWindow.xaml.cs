@@ -107,7 +107,7 @@ namespace MediaAirNX
         }// иницилизация картинки фона главной формы
         private void InitializeMediaelement()
         {
-            elementMedia.Source = new Uri(@"E:\Music\Death Note OST\Death Note Original Soundtrack I/01. Hideki Taniuchi - Death Note.mp3");
+      //      elementMedia.Source = new Uri(@"E:\Music\Death Note OST\Death Note Original Soundtrack I/01. Hideki Taniuchi - Death Note.mp3");
             elementMedia.Play();
         }
         private void InitializeTimerForSlider()
