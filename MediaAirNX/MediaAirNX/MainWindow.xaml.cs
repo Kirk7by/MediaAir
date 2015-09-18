@@ -25,7 +25,7 @@ namespace MediaAirNX
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        
         public event EventHandler med;
 
         Image image = new Image();
@@ -42,6 +42,12 @@ namespace MediaAirNX
         public MainWindow()
         {
             InitializeComponent();
+      //      this.Loaded += new RoutedEventHandler(button_Tracklist_Click);//
+/*
+            var newpageTracklist = new Pages.PageTrackList();
+            var MainWindo = new MainWindow(); 
+            newpageTracklist.registerobs(MainWindo);//Ригистрируем наш класс как подписчика*/
+
 
             MediaAirNX.config.Default.SettingsSaving += InitializeFullscreanWindow;  /*подписка на событие сохранения настроек*/
             med += updMusicc;  /*подписка на событие обновления содержимого медиаэлемента и последующего его запуска*/
@@ -74,6 +80,7 @@ namespace MediaAirNX
         }
         private void ButtonAutostartmusic_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            med(sender, e);//ladding mediaSource
             elementMedia.Stop();
         }
         #endregion
@@ -100,7 +107,7 @@ namespace MediaAirNX
         } //иницилизация перехода в полноэкранный режим и обратно
         private void InitializeImage()
         {
-            image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/anime_girl.jpg"));
+            image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/img2.jpg"));
             myBrush.ImageSource = image.Source;
             myBrush.Stretch = Stretch.UniformToFill;
             MaineWindow.Background = myBrush;
@@ -168,9 +175,14 @@ namespace MediaAirNX
             MaineWindow.Background = myBrush;
             Frame.Content = null;
             Frame.NavigationService.RemoveBackEntry();
-            Frame.Source = new Uri("/MediaAirNX;component/Pages/PageTrackList.xaml", UriKind.RelativeOrAbsolute);
+          
+
+            PageTrackList tracklistPage = new PageTrackList();
+            tracklistPage.mainwindow1ButtonmediaLoaded += new EventHandler(updMusicc);
+            Frame.Navigate(tracklistPage);
+            // Frame.Source = new Uri("/MediaAirNX;component/Pages/PageTrackList.xaml", UriKind.RelativeOrAbsolute);
             // new serializableCollections().Save();
-           //  serializableCollections.Save();
+            //  serializableCollections.Save();
         }
         private void button_Add_new_Click(object sender, RoutedEventArgs e)
         {
@@ -233,9 +245,18 @@ namespace MediaAirNX
             TimeSpan time = new TimeSpan(0, 0, Convert.ToInt32(Math.Round(sliderSeek.Value))); //отлавливаем позицию на которую нужно перемотать трек, для двойного щелчка
             elementMedia.Position = time; //устанавливаем новую позицию для трека
         }
+
+        public void update(object sender, EventArgs e)
+        {
+            MessageBox.Show("update parent");
+        }
+
         #endregion
 
+        private void mainwindow_Loaded(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 
 
