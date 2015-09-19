@@ -192,6 +192,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Media\blackPhone.jpg" />
+    <Resource Include="Media\Wplus.png" />
+    <Resource Include="Media\WhiteFolder.png" />
+    <Resource Include="Media\plusicon.png" />
     <Resource Include="Media\img2.jpg" />
     <Resource Include="Media\img1.jpg" />
     <Resource Include="Media\optionsGirlsSmoke.jpg" />

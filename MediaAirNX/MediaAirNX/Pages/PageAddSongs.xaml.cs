@@ -24,5 +24,10 @@ namespace MediaAirNX.Pages
         {
             InitializeComponent();
         }
+
+        private void button_AddSongs_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

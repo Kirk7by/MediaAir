@@ -42,13 +42,15 @@ namespace MediaAirNX
         public MainWindow()
         {
             InitializeComponent();
-      //      this.Loaded += new RoutedEventHandler(button_Tracklist_Click);//
-/*
-            var newpageTracklist = new Pages.PageTrackList();
-            var MainWindo = new MainWindow(); 
-            newpageTracklist.registerobs(MainWindo);//Ригистрируем наш класс как подписчика*/
+            //      this.Loaded += new RoutedEventHandler(button_Tracklist_Click);//
+            /*
+                        var newpageTracklist = new Pages.PageTrackList();
+                        var MainWindo = new MainWindow(); 
+                        newpageTracklist.registerobs(MainWindo);//Ригистрируем наш класс как подписчика*/
 
+            _timer2.Interval = TimeSpan.FromSeconds(5);
 
+            _timer2.Tick += new EventHandler(invis);
             MediaAirNX.config.Default.SettingsSaving += InitializeFullscreanWindow;  /*подписка на событие сохранения настроек*/
             med += updMusicc;  /*подписка на событие обновления содержимого медиаэлемента и последующего его запуска*/
 
@@ -256,6 +258,34 @@ namespace MediaAirNX
         private void mainwindow_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+ 
+        DispatcherTimer _timer2 = new DispatcherTimer();
+        private void elementMedia_MouseMove(object sender, MouseEventArgs e)
+        {
+            Frame.Visibility = Visibility.Visible;
+            GridMenu.Visibility = Visibility.Visible;
+            ButtonAutostartmusic.Visibility = Visibility.Visible;
+            buttonHideMenu.Visibility = Visibility.Visible;
+            sliderSeek.Visibility = Visibility.Visible;
+            this.Cursor = Cursors.Arrow;
+            _timer2.Stop();
+            _timer2.Start();
+        }
+        void invis(object sender, EventArgs e)
+        {
+            Frame.Visibility = Visibility.Collapsed;
+            GridMenu.Visibility = Visibility.Collapsed;
+            ButtonAutostartmusic.Visibility = Visibility.Collapsed;
+            buttonHideMenu.Visibility = Visibility.Collapsed;
+            sliderSeek.Visibility = Visibility.Collapsed;
+            //mainwindow.Background = new SolidColorBrush(Colors.White);
+            image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/blackPhone.jpg"));
+            myBrush.ImageSource = image.Source;
+            MaineWindow.Background = myBrush;
+            this.Cursor = Cursors.None;
+            
+            _timer2.Stop();
         }
     }
 

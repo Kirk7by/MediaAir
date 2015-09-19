@@ -46,7 +46,7 @@
             <ColumnDefinition Width="225*"/>
             <ColumnDefinition Width="63.2"/>
         </Grid.ColumnDefinitions>
-        <MediaElement x:Name="elementMedia" Source="Media/07 - Lifeline.mp3" Grid.RowSpan="3" Grid.ColumnSpan="3" MediaOpened="media_MediaOpened" LoadedBehavior="Manual" UnloadedBehavior="Manual"/>
+        <MediaElement x:Name="elementMedia" Source="Media/07 - Lifeline.mp3" Grid.RowSpan="3" Grid.ColumnSpan="3" MediaOpened="media_MediaOpened" LoadedBehavior="Manual" UnloadedBehavior="Manual" OpacityMask="Black" MouseMove="elementMedia_MouseMove"/>
         <Viewbox Margin="0,10,1.4,4.2" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" StretchDirection="UpOnly">
             <Grid x:Name="GridMenu" HorizontalAlignment="Left" Height="268" VerticalAlignment="Top" Width="162">
 
