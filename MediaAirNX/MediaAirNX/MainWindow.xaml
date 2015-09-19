@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Name="mainwindow" x:Class="MediaAirNX.MainWindow"
         
-        Title="MainWindow" Height="457.8" Width="743.7"  ResizeMode="CanResizeWithGrip" Loaded="mainwindow_Loaded">
+        Title="MainWindow" Height="457.8" Width="743.7"  ResizeMode="CanResizeWithGrip" Loaded="mainwindow_Loaded" SizeChanged="mainwindow_SizeChanged">
 
 
 
@@ -35,7 +35,7 @@
             </BeginStoryboard>
         </EventTrigger>
     </Window.Triggers>
-    <Grid x:Name="MaineWindow" Loaded="Grid_Loaded">
+    <Grid x:Name="MaineWindow" Loaded="Grid_Loaded" MouseDown="MaineWindow_MouseDown" MouseLeftButtonDown="MaineWindow_MouseLeftButtonDown">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MinHeight="63.2"/>
             <RowDefinition Height="158*"/>

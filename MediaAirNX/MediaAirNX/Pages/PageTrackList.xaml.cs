@@ -24,7 +24,7 @@ namespace MediaAirNX.Pages
     /// </summary>
     public partial class PageTrackList : Page, IObservable
     {
-        public event EventHandler mainwindow1ButtonmediaLoaded;
+        public event EventHandler<string> mainwindow1ButtonmediaLoaded;
         private List<IObserver> _observer;
         List<serializableCollections> cats = new List<serializableCollections>();
 
@@ -45,8 +45,8 @@ namespace MediaAirNX.Pages
         void ShowHideDetails(object sender, RoutedEventArgs e)
         {
             object MusicFilePath = ((Button)sender).CommandParameter;
-            StaticEventsClass.MediaSource = MusicFilePath.ToString();
-            mainwindow1ButtonmediaLoaded(this,EventArgs.Empty);
+      //      StaticEventsClass.MediaSource = MusicFilePath.ToString();
+            mainwindow1ButtonmediaLoaded(this, MusicFilePath.ToString());
        //     notify();
 
 

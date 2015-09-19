@@ -105,7 +105,6 @@
     <Compile Include="Logic\GlobalLongsListName.cs" />
     <Compile Include="Logic\MetodtSerializable.cs" />
     <Compile Include="Logic\serializableCollections.cs" />
-    <Compile Include="Logic\StaticEventsClass.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

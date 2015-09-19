@@ -26,7 +26,7 @@ namespace MediaAirNX
     public partial class MainWindow : Window
     {
         
-        public event EventHandler med;
+    //    public event EventHandler med;
 
         Image image = new Image();
         ImageBrush myBrush = new ImageBrush();
@@ -52,7 +52,7 @@ namespace MediaAirNX
 
             _timer2.Tick += new EventHandler(invis);
             MediaAirNX.config.Default.SettingsSaving += InitializeFullscreanWindow;  /*подписка на событие сохранения настроек*/
-            med += updMusicc;  /*подписка на событие обновления содержимого медиаэлемента и последующего его запуска*/
+     //       med += updMusicc;  /*подписка на событие обновления содержимого медиаэлемента и последующего его запуска*/
 
             InitializeFullscreanWindow(this, EventArgs.Empty);  //вызов иницилизации параметров раскрытия на весь экран
             InitializeImage();
@@ -82,15 +82,15 @@ namespace MediaAirNX
         }
         private void ButtonAutostartmusic_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            med(sender, e);//ladding mediaSource
+       //     med(sender, e);//ladding mediaSource
             elementMedia.Stop();
         }
         #endregion
 
         #region Методы для иницилизации и подписки на события
-        private void updMusicc(object sender, EventArgs e)
+        private void updMusicc(object sender, string mediasource)
         {
-            elementMedia.Source = new Uri(StaticEventsClass.MediaSource);
+            elementMedia.Source = new Uri(mediasource);
             elementMedia.Play();
 
         }   //обновление содержимого медиаэлемента (STRING URI)
@@ -180,7 +180,7 @@ namespace MediaAirNX
           
 
             PageTrackList tracklistPage = new PageTrackList();
-            tracklistPage.mainwindow1ButtonmediaLoaded += new EventHandler(updMusicc);
+            tracklistPage.mainwindow1ButtonmediaLoaded += new EventHandler<string>(updMusicc);
             Frame.Navigate(tracklistPage);
             // Frame.Source = new Uri("/MediaAirNX;component/Pages/PageTrackList.xaml", UriKind.RelativeOrAbsolute);
             // new serializableCollections().Save();
@@ -286,6 +286,36 @@ namespace MediaAirNX
             this.Cursor = Cursors.None;
             
             _timer2.Stop();
+        }
+
+        private void mainwindow_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+           
+        }
+
+        private void MaineWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left && e.ClickCount == 2)
+            {
+                if (this.WindowState == System.Windows.WindowState.Maximized && this.WindowStyle == WindowStyle.None)
+                {
+               
+                 //   this.WindowStyle = WindowStyle.ThreeDBorderWindow;
+                    this.WindowState = WindowState.Normal;
+                    this.WindowStyle = WindowStyle.ThreeDBorderWindow;
+                }
+                else
+                {
+                    this.WindowStyle = WindowStyle.None;
+                    this.WindowState = WindowState.Maximized;
+                }
+
+            }
+        }
+
+        private void MaineWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 
