@@ -12,11 +12,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Viewbox StretchDirection="UpOnly" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-            <Button x:Name="button_AddSongs" Height="71" Width="332" Content="Добавить папку" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Style="{DynamicResource DefaultButtonStyle}" FontSize="29.333" Background="#CC97D6D1" Click="button_AddSongs_Click"/>
+        <Viewbox StretchDirection="UpOnly" VerticalAlignment="Bottom" Margin="0,0,1,0">
+            <Button x:Name="button_AddSongs" Content="Добавить папку" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Style="{DynamicResource DefaultButtonStyle}" FontSize="29.333" Background="#CC97D6D1" Click="button_AddSongs_Click" Height="103" Width="276"/>
         </Viewbox>
-        <Viewbox Grid.Row="1" StretchDirection="UpOnly" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Button x:Name="button_Copy" Height="71" Width="332" Content="Добавить пофайлово" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Style="{DynamicResource DefaultButtonStyle}" Background="#CC97D6D1" FontSize="26.667"/>
+        <Viewbox Grid.Row="1" StretchDirection="UpOnly" Margin="0,0,1,0">
+            <Button x:Name="button_Copy" Height="126" Width="335" Content="Добавить пофайлово" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Style="{DynamicResource DefaultButtonStyle}" Background="#CC97D6D1" FontSize="26.667"/>
         </Viewbox>
         <Label x:Name="label" Content="Выберите файлы для добавления в плейлист" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="26" Width="319"/>
 

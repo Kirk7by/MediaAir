@@ -25,9 +25,9 @@ namespace MediaAirNX
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-    //    public event EventHandler med;
 
+        //    public event EventHandler med;
+       
         Image image = new Image();
         ImageBrush myBrush = new ImageBrush();
         string mediaUri=null;
@@ -41,6 +41,7 @@ namespace MediaAirNX
 
         public MainWindow()
         {
+          
             InitializeComponent();
             //      this.Loaded += new RoutedEventHandler(button_Tracklist_Click);//
             /*
@@ -116,7 +117,8 @@ namespace MediaAirNX
         }// иницилизация картинки фона главной формы
         private void InitializeMediaelement()
         {
-      //      elementMedia.Source = new Uri(@"E:\Music\Death Note OST\Death Note Original Soundtrack I/01. Hideki Taniuchi - Death Note.mp3");
+            
+            //elementMedia.Source = new Uri(args1);
             elementMedia.Play();
         }
         private void InitializeTimerForSlider()
@@ -231,11 +233,7 @@ namespace MediaAirNX
         #endregion
 
         #region Что-то временное и ненужное
-        private void buttonAllHide_Click(object sender, RoutedEventArgs e)
-        {
-            if (GridMenu.Visibility == Visibility.Visible) { GridMenu.Visibility = Visibility.Collapsed; Frame.Visibility = Visibility.Collapsed; }
-            else { GridMenu.Visibility = Visibility.Visible; Frame.Visibility = Visibility.Visible; }
-        }
+        
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
             //-----------------------------
