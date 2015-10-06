@@ -34,7 +34,7 @@
     <Style x:Key="DefaultButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
         <Setter Property="Background" Value="{StaticResource Button.Static.Background}" />
-        <Setter Property="Button.FontFamily" Value="./fonts/#05_ZZ Death Note 1.0 RUS" />
+        <!--   <Setter Property="Button.FontFamily" Value="./fonts/#05_ZZ Death Note 1.0 RUS" />  -->
         <Setter Property="Button.FontSize" Value="17" />
         <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}" />
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
@@ -278,7 +278,7 @@
         <Setter Property="CellStyle">
             <Setter.Value>
                 <Style TargetType="DataGridCell">
-                    <Setter Property="Height" Value="125" />
+               <!--     <Setter Property="Height" Value="50" /> -->
 
                     <Style.Triggers>
                         <Trigger Property="DataGridCell.IsSelected" Value="true" >

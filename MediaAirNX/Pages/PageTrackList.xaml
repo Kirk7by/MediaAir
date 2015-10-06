@@ -12,7 +12,6 @@
             <RowDefinition Height="24"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <MediaElement x:Name="mediaElement3" Margin="10,0,10,10" Grid.Row="1" LoadedBehavior="Manual"/>
 
         <DataGrid x:Name="dataGrid" Margin="10,0,10,10" ColumnWidth="*" Grid.Row="1" CanUserAddRows="False" HorizontalGridLinesBrush="#99151F4D" VerticalGridLinesBrush="#992B4170" BorderBrush="#CC688CAF" RowBackground = "#FFCDE3EA" Opacity="0.8" VerticalContentAlignment="Stretch" Style="{DynamicResource DataGridStyle2}" FontSize="18.667" FontFamily="Sitka Text" Foreground="Black" FontWeight="Bold" GridLinesVisibility="Horizontal" HeadersVisibility="Column" Background="{x:Null}" MinColumnWidth="40" MinRowHeight="3">
             <DataGrid.Columns>
@@ -20,14 +19,14 @@
                 <DataGridTemplateColumn Header="Play" IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Click="ShowHideDetails" CommandParameter="{Binding MusicFilePath}" Content="Play" Style="{DynamicResource buttonSetupStyle}" Background="#CCEE7D7D" Opacity="0.8" FontSize="18.667"/>
+                            <Button Click="ShowHideDetails" CommandParameter="{Binding MusicFilePath}" Content="Play" Opacity="0.8" FontSize="10.667" FontFamily="Consolas" Foreground="White" Background="#FF939393" OpacityMask="{x:Null}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Image" Width="125">
+                <DataGridTemplateColumn Header="Image">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Image Source="{Binding ImageFilePath}" />
+                            <Image Source="{Binding ImageFilePath}" Stretch="UniformToFill" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

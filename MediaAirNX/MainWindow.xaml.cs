@@ -24,36 +24,20 @@ namespace MediaAirNX
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
-
-        //    public event EventHandler med;
-       
+    {   
         Image image = new Image();
         ImageBrush myBrush = new ImageBrush();
-        string mediaUri=null;
         TimeSpan _position;
         DispatcherTimer _timer = new DispatcherTimer();
 
-        public event PropertyChangedEventHandler PropertyChanged; // событие для проверки изменения свойства
-
-        
-
-
         public MainWindow()
-        {
-          
+        {    
             InitializeComponent();
-            //      this.Loaded += new RoutedEventHandler(button_Tracklist_Click);//
-            /*
-                        var newpageTracklist = new Pages.PageTrackList();
-                        var MainWindo = new MainWindow(); 
-                        newpageTracklist.registerobs(MainWindo);//Ригистрируем наш класс как подписчика*/
 
             _timer2.Interval = TimeSpan.FromSeconds(5);
+            _timer2.Tick += new EventHandler(invis);    /*для полного отображения видео*/
 
-            _timer2.Tick += new EventHandler(invis);
             MediaAirNX.config.Default.SettingsSaving += InitializeFullscreanWindow;  /*подписка на событие сохранения настроек*/
-     //       med += updMusicc;  /*подписка на событие обновления содержимого медиаэлемента и последующего его запуска*/
 
             InitializeFullscreanWindow(this, EventArgs.Empty);  //вызов иницилизации параметров раскрытия на весь экран
             InitializeImage();
@@ -61,15 +45,10 @@ namespace MediaAirNX
             InitializeTimerForSlider();
         }
 
-        
-
-
-
         #region Медиакнопка
         bool tmp;   /*отвечает за воспроизедение*/
         private void ButtonAutostartmusic_Click(object sender, RoutedEventArgs e)
         {
-            //med(sender, e);
             if (!tmp)
             {
                 elementMedia.Pause();
@@ -81,6 +60,8 @@ namespace MediaAirNX
                 tmp = false;
             }
         }
+
+
         private void ButtonAutostartmusic_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
        //     med(sender, e);//ladding mediaSource
@@ -132,21 +113,20 @@ namespace MediaAirNX
         #region Кнопки меню
         private void button_setup_Click(object sender, RoutedEventArgs e)
         {
-            //swap Image
-
             image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/optionsGirlsSmoke.jpg"));
             myBrush.ImageSource = image.Source;
             MaineWindow.Background = myBrush;
-            
-            
+               
             Frame.Content = null;
             Frame.NavigationService.RemoveBackEntry();
             Frame.Source = new Uri("/MediaAirNX;component/Pages/PageSetup.xaml", UriKind.RelativeOrAbsolute);
         }   //нажатие на кнопку настроек
+
         private void button_exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }   //нажатие на кнопку выход
+
         private void buttonHideMenu_Click(object sender, RoutedEventArgs e)
         {
             //  if (col1.Width != new GridLength(0, GridUnitType.Star) || GridMenu.Visibility == Visibility.Visible)
@@ -174,7 +154,7 @@ namespace MediaAirNX
         }
         private void button_Tracklist_Click(object sender, RoutedEventArgs e)
         {
-            image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/img1.jpg"));
+            image.Source = new BitmapImage(new Uri("pack://application:,,,/Media/guitarBlack.jpg"));
             myBrush.ImageSource = image.Source;
             MaineWindow.Background = myBrush;
             Frame.Content = null;
@@ -184,9 +164,6 @@ namespace MediaAirNX
             PageTrackList tracklistPage = new PageTrackList();
             tracklistPage.mainwindow1ButtonmediaLoaded += new EventHandler<string>(updMusicc);
             Frame.Navigate(tracklistPage);
-            // Frame.Source = new Uri("/MediaAirNX;component/Pages/PageTrackList.xaml", UriKind.RelativeOrAbsolute);
-            // new serializableCollections().Save();
-            //  serializableCollections.Save();
         }
         private void button_Add_new_Click(object sender, RoutedEventArgs e)
         {
@@ -220,8 +197,6 @@ namespace MediaAirNX
         }
         private void sliderSeek_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-                     
-        //    MessageBox.Show("ssa");
             int pos = Convert.ToInt32(sliderSeek.Value);
             elementMedia.Position = new TimeSpan(0, 0, 0, pos, 0);
         }
@@ -316,6 +291,7 @@ namespace MediaAirNX
             this.DragMove();
         }
     }
+
 
 
 }

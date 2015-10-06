@@ -32,8 +32,8 @@ namespace MediaAirNX.Pages
         {
             InitializeComponent();
             initializeDataGrid();
-       //     mediaElement3.Source = new Uri(@"E:\Music\Death Note OST\Death Note Original Soundtrack I/01. Hideki Taniuchi - Death Note.mp3");
-            
+            //     mediaElement3.Source = new Uri(@"E:\Music\Death Note OST\Death Note Original Soundtrack I/01. Hideki Taniuchi - Death Note.mp3");
+            dataGrid.RowHeight = 50;
         }
 
         private void тесткнопка_Click(object sender, RoutedEventArgs e)

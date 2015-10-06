@@ -191,6 +191,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Media\guitarBlack.jpg" />
+    <Resource Include="Media\stop.png" />
+    <Resource Include="Media\prew.png" />
+    <Resource Include="Media\next.png" />
+    <Resource Include="Media\play.png" />
     <Resource Include="Media\blackPhone.jpg" />
     <Resource Include="Media\Wplus.png" />
     <Resource Include="Media\WhiteFolder.png" />
