@@ -1,0 +1,90 @@
+﻿<Page x:Class="MediaAirNX.Pages.PageDetailSong"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="400"
+	Title="PageDetailSong">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="269*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.ColumnSpan="2" Margin="0,0,0,3" Stretch="Fill">
+            <Grid Height="129" VerticalAlignment="Top" Width="400">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="0*"/>
+                </Grid.RowDefinitions>
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#7FFFFFFF" Offset="0"/>
+                        <GradientStop Color="#7FFFFFFF" Offset="1"/>
+                        <GradientStop Color="#4CBAFCE6" Offset="0.488"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Viewbox>
+
+        <GridSplitter VerticalAlignment="Bottom" Height="9" HorizontalAlignment="Stretch" Grid.ColumnSpan="2"
+   >
+            <GridSplitter.Background
+   >
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0"
+   >
+                    <GradientStop Color="#FFD0F1E8" Offset="1"
+  />
+                    <GradientStop
+  />
+                </LinearGradientBrush>
+            </GridSplitter.Background>
+        </GridSplitter>
+        <DataGrid Grid.Row="1" Grid.ColumnSpan="2" Background="#66F0F0F0" BorderBrush="#FF68AF9D"
+  />
+        <Grid Grid.ColumnSpan="2"
+   >
+            <Grid.ColumnDefinitions
+   >
+                <ColumnDefinition Width="8*"
+  />
+                <ColumnDefinition Width="17*"
+  />
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="1" Height="33" Margin="1,0,0,0" TextWrapping="Wrap" Text="The Animals – House of Rising Sun" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="#4C94DEE2" Foreground="#FF3DC242" FontStyle="Italic" Padding="0,0,1,1" Grid.IsSharedSizeScope="True" SelectionOpacity="5" ClipToBounds="True" SnapsToDevicePixels="True" HorizontalAlignment="Left" Width="261"/>
+            <Label Content="Прошел на:" Grid.Column="1" HorizontalAlignment="Left" Margin="1,38,0,0" VerticalAlignment="Top" Foreground="#FF542C9C" FontStyle="Italic" FontSize="12" Height="26" Width="74"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="75,32,0,0" TextWrapping="Wrap" Text="100%" VerticalAlignment="Top" Width="63" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="#4C94DEE2" FontStyle="Italic" FontSize="20" UndoLimit="4">
+                <TextBox.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF3A9632" Offset="0"/>
+                        <GradientStop Color="#FF02020B" Offset="1"/>
+                        <GradientStop Color="#FFD9E046" Offset="0.525"/>
+                    </LinearGradientBrush>
+                </TextBox.Foreground>
+            </TextBox>
+            <Label Content="Прошел на:" Grid.Column="1" HorizontalAlignment="Left" Margin="1,61,0,0" VerticalAlignment="Top" Foreground="#FF542C9C" FontStyle="Italic" FontSize="12" Height="26" Width="74"/>
+        </Grid>
+        <Viewbox Margin="0,0,0.2,0" HorizontalAlignment="Left" VerticalAlignment="Top" StretchDirection="UpOnly">
+            <Border BorderBrush="#B2A64DD2" BorderThickness="1" Background="#199F22CA" Height="128" Width="127">
+                <Image Source="/MediaAirNX;component/Media/imageAlbum.jpg" Margin="0.2,0.2,-0.4,0" Opacity="0.95" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Stretch="Fill" Height="126">
+                    <Image.OpacityMask>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#CCDA7373" Offset="0.507"/>
+                            <GradientStop Color="#FC573939" Offset="1"/>
+                            <GradientStop Color="#FCDA7373" Offset="0.02"/>
+                        </RadialGradientBrush>
+                    </Image.OpacityMask>
+                </Image>
+            </Border>
+        </Viewbox>
+
+    </Grid>
+</Page>

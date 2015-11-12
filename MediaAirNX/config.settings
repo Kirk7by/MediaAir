@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MediaAirNX" GeneratedClassName="config">
+  <Profiles />
+  <Settings>
+    <Setting Name="FullScreen" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Volume" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="PatchMediaXMLFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">./MyMediaList.xml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
